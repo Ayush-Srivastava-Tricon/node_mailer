@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" >
+        </div>
+        <div class="submit-btn">
+            <button type="submit" onclick="getOtp()">Get Otp</button>
+        </div>
+
+        <div class="otp-container">
+            <label for="otp">Enter OTP : </label>
+            <input type="number" id="otp" value="">
+        </div>
+
+        <div class="check-otp">
+            <button type="submit" onclick="verifyOtp()">Verify OTP</button>
+        </div>
+
+        <div class="alert-message" id="alert">
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    
+
+    function verifyOtp(){
+        let otpValue = document.getElementById("otp").value;
+        const alertDiv = document.getElementById("alert");
+        const alertMsg = document.createElement("strong");
+
+            if(otpValue == OTP){
+                alertMsg.innerHTML = "OTP VERIFIED";
+            } else{
+                alertMsg.innerHTML = "INCORRECT OTP";
+            }
+            alertDiv.append(alertMsg);
+    }
+
+
+</script>
+</html>
